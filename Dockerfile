@@ -1,13 +1,13 @@
-FROM docker:19.03.8-dind
+FROM docker:19.03.8
 
 RUN apk --no-cache add \
     make \
     gcc \
-    musl-dev \
+    libc-dev \
     libffi-dev \
     openssl-dev \
     python \
-    python-dev \
+    python3-dev \
     py-pip
 
 RUN pip install docker-compose
