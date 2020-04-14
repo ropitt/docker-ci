@@ -1,13 +1,12 @@
 FROM docker:19.03.8
 
 RUN apk --no-cache add \
-    make \
-    gcc \
-    libc-dev \
+    py3-pip \
+    python3-dev \
     libffi-dev \
     openssl-dev \
-    python \
-    python3-dev \
-    py-pip
+    gcc \
+    libc-dev \
+    make
 
-RUN pip install docker-compose
+RUN pip3 install docker-compose
